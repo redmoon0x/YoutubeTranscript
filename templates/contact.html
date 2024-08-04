@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #1d1d1d;
+            border-bottom: 1px solid #444;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff !important;
+            text-transform: uppercase;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #9b59b6 !important; /* Purple color */
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-group label {
+            font-weight: 500;
+            color: #fff;
+        }
+        .form-control {
+            background-color: #222630;
+            border: 2px solid #2B3040;
+            border-radius: 8px;
+            color: white;
+        }
+        .form-control:focus {
+            border-color: #9b59b6;
+            background-color: #222630;
+            color: white;
+        }
+        .btn-simple {
+            background-color: #9b59b6;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 12px 24px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-simple:hover {
+            background-color: #7e439e;
+        }
+        .btn-simple:active {
+            background-color: #652b7e;
+        }
+        @media (max-width: 576px) {
+            .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-item {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+    </style>
+    <title>Contact Us</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/">YouTube Transcriptor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Contact Form -->
+    <div class="container">
+        <h1 class="mb-4 text-center">Contact Us</h1>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="subject" value="New Submission from Web3Forms">
+            <input type="hidden" name="from_name" value="Your Website Name">
+            <input type="hidden" name="ccemail" value="partner@example.com">
+            <input type="hidden" name="replyto" value="customer@example.com">
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="First Name" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" class="form-control" id="phoneNumber" name="Phone Number" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="form-group">
+                <div class="h-captcha" data-captcha="true"></div>
+            </div>
+           
+            <center><button type="submit" class="btn-simple">Submit Form</button></center>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 YouTube Transcriptor. All rights reserved.</p>
+    </footer>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
